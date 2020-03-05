@@ -3,14 +3,13 @@ This [GitHub Action](https://github.com/features/actions) will build [doxygen](h
 
 **NOTE:** If you are using dot/graphviz in your doxygen config to generate diagrams the only fonts installed, and hence can be used are those in the [GNU FreeFont](https://www.gnu.org/software/freefont/) package (FreeSans, FreeMono and FreeSerif).
 
-
 ## Inputs
 ### 'doxyfile-path'
-**Required** Path of the Doxyfile relative to the repository root. By default `./Doxyfile'.
+**Required** Path of the Doxyfile relative to the repository root. Default: `./Doxyfile`.
 
 ## Example usage
 ```yaml
-uses: mattnotmitt/doxygen-action@v0.1
+uses: mattnotmitt/doxygen-action@v1
 with:
     doxyfile-path: 'docs/Doxygen'
 ```
