@@ -1,0 +1,12 @@
+name: 'Doxygen'
+description: 'Run doxygen on a project'
+inputs:
+  doxyfile-path:
+    description: 'Path to Doxyfile'
+    required: true
+    default: './Doxyfile'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.doxyfile-path }}
