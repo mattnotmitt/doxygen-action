@@ -1,5 +1,5 @@
-name: 'Doxygen'
-description: 'Run doxygen on a project'
+name: 'Doxygen Action'
+description: 'Generate documentation on a commented project using doxygen'
 inputs:
   doxyfile-path:
     description: 'Path to Doxyfile'
