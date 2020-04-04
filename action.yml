@@ -8,8 +8,13 @@ inputs:
     description: 'Path to Doxyfile'
     required: true
     default: './Doxyfile'
+  working-directory:
+    description: 'Working directory'
+    required: true
+    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.doxyfile-path }}
+    - ${{ inputs.working-directory }}
