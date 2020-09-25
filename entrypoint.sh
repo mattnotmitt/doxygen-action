@@ -9,3 +9,7 @@ if [ ! -f $1 ]; then
 fi
 
 doxygen $1
+
+# latex
+cd $2/docs/latex
+make
