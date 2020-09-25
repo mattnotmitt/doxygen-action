@@ -15,11 +15,16 @@ if [ ! -f $1 ]; then
 fi
 
 # install packages; add latex-related packages only if enabled
-PACKAGES="doxygen graphviz ttf-freefont"
 if [ ! -z $3 ] ; then
-  if [ "$3" = true ] ; then
-    PACKAGES="$PACKAGES perl build-base texlive-full biblatex"
-  fi
+  BUILD_LATEX=$3 && $(grep -q GENERATE_LATEX\\s\*=\\s\*YES $1)
+  LATEX_DIR="$(sed -n -e 's/^OUTPUT_DIRECTORY\s*=\s*//p' Doxyfile)/$(sed -n -e 's/^LATEX_OUTPUT\s*=\s*//p' Doxyfile)"
+else; then
+  BUILD_LATEX=0
+fi
+
+PACKAGES="doxygen graphviz ttf-freefont"
+if [ "$BUILD_LATEX" = true ] ; then
+  PACKAGES="$PACKAGES perl build-base texlive-full biblatex"
 fi
 apk add $PACKAGES
 
@@ -27,9 +32,7 @@ apk add $PACKAGES
 doxygen $1
 
 # if enabled, make latex pdf output
-if [ ! -z $3 ] ; then
-  if [ "$3" = true ] ; then
-    cd $2/docs/latex
-    make
-  fi
+if [ "$BUILD_LATEX" = true ] ; then
+  cd $LATEX_DIR
+  make
 fi
