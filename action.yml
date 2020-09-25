@@ -12,9 +12,14 @@ inputs:
     description: 'Working directory'
     required: true
     default: '.'
+  enable-latex:
+    description: 'Generate latex documentation'
+    required: false
+    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.doxyfile-path }}
     - ${{ inputs.working-directory }}
+    - ${{ inputs.enable-latex }}
