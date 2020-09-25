@@ -5,7 +5,7 @@ FROM alpine:edge
 COPY entrypoint.sh /entrypoint.sh
 
 # Install required packages
-RUN apk add doxygen graphviz ttf-freefont
+RUN apk add doxygen graphviz ttf-freefont doxygen-latex perl build-base
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
