@@ -11,7 +11,7 @@ Use with an action such as [actions-gh-pages](https://github.com/peaceiris/actio
 ### 'doxyfile-path'
 **Required** Path of the Doxyfile relative to the working directory. Default: `./Doxyfile`.
 ### 'enable-latex'
-**Optional** true: enable make for LaTeX part of doxygen output. Default: `false`.
+**Optional** Flag to enable `make`-ing of the LaTeX part of the doxygen output. Default: `false`.
 
 ## Example usage (no LaTeX)
 ```yaml
