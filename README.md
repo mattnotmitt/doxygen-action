@@ -10,11 +10,22 @@ Use with an action such as [actions-gh-pages](https://github.com/peaceiris/actio
 **Required** Path of the working directory to change to before running doxygen. Default: `.`
 ### 'doxyfile-path'
 **Required** Path of the Doxyfile relative to the working directory. Default: `./Doxyfile`.
+### 'enable-latex'
+**Optional** true: enable make for LaTeX part of doxygen output. Default: `false`.
 
-## Example usage
+## Example usage (no LaTeX)
 ```yaml
 uses: mattnotmitt/doxygen-action@v1
 with:
     working-directory: 'submodule/'
     doxyfile-path: 'docs/Doxygen'
+```
+
+## Example usage (with LaTeX)
+```yaml
+uses: mattnotmitt/doxygen-action@v1
+with:
+    working-directory: 'submodule/'
+    doxyfile-path: 'docs/Doxygen'
+    enable-latex: true
 ```
