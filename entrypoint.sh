@@ -18,7 +18,7 @@ fi
 if [ ! -z $3 ] ; then
   BUILD_LATEX=$3 && $(grep -q GENERATE_LATEX\\s\*=\\s\*YES $1)
   LATEX_DIR="$(sed -n -e 's/^OUTPUT_DIRECTORY\s*=\s*//p' Doxyfile)/$(sed -n -e 's/^LATEX_OUTPUT\s*=\s*//p' Doxyfile)"
-else; then
+else
   BUILD_LATEX=0
 fi
 
