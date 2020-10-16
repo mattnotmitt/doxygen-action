@@ -34,4 +34,6 @@ with:
     working-directory: 'submodule/'
     doxyfile-path: 'docs/Doxygen'
     enable-latex: true
+    fail-on-warnings: 'TRUE'
+    warnings-filter: 'stupid-warning-I-want-to-ignore'
 ```
