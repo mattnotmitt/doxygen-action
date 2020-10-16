@@ -20,6 +20,10 @@ inputs:
     description: 'Make this action fail if doxygen produces warnings.'
     required: false
     default: 'FALSE'
+  warnings-filter:
+    description: 'Warning filter, matching lines will be filtered out.'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -28,3 +32,4 @@ runs:
     - ${{ inputs.working-directory }}
     - ${{ inputs.enable-latex }}
     - ${{ inputs.fail-on-warnings }}
+    - ${{ inputs.warnings-filter }}

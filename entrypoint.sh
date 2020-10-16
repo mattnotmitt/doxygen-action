@@ -45,6 +45,19 @@ fi
 
 if [ "$fail_on_warnings" = true ]; then
     doxygen $1 2> warnings.txt
+
+    # if $5 is non-empty, apply filter.
+    if [ ! -z "$5" ]; then
+      grep "$5" warnings.txt > filtered-out-warnings.txt
+      filtered_amount=$(cat filtered-out-warnings.txt | wc -l)
+      printf "Total amount of filtered-out doxygen errors and warnings: '%d'\n"  "$filtered_amount"
+      echo "Filtered-out warnings:"
+      cat filtered-out-warnings.txt
+      grep -v "$5" warnings.txt > warnings-filtered.txt
+      mv warnings-filtered.txt warnings.txt
+    else
+      echo "No filter specified, not filtering any warnings."
+    fi
     problems_amount=$(cat warnings.txt | wc -l)
     printf "Total amount of doxygen errors and warnings: '%d'\n"  "$problems_amount"
     if [ $problems_amount -ne 0 ] ; then
