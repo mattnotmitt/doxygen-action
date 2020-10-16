@@ -31,19 +31,16 @@ fi
 apk add $PACKAGES
 
 
-# Tests if the third argument is either 'TRUE' or 'FALSE'. Produces warning if neither is set.
-if [ "$4" = "TRUE" ]; then
+# Tests if the $4 is either 'true' or 'false'.
+if [ ! -z $4 ]; then
     echo "Failing on warnings is enabled."
-    fail_on_warnings=true
-elif [ "$4" = "FALSE" ]; then
-    echo "Failing on warnings disabled."
-    fail_on_warnings=false
+    FAIL_ON_WARNINGS=true
 else
-    echo "Unknown value for fail-on-warnings. Should be either 'FALSE' or 'TRUE'."
-    exit 1
+    echo "Failing on warnings disabled."
+    FAIL_ON_WARNINGS=false
 fi
 
-if [ "$fail_on_warnings" = true ]; then
+if [ "$FAIL_ON_WARNINGS" = true ]; then
     doxygen $1 2> warnings.txt
 
     # if $5 is non-empty, apply filter.
