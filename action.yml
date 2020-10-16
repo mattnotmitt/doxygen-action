@@ -16,6 +16,10 @@ inputs:
     description: 'Generate latex documentation'
     required: false
     default: false
+  fail-on-warnings:
+    description: 'Make this action fail if doxygen produces warnings.'
+    required: false
+    default: 'FALSE'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -23,3 +27,4 @@ runs:
     - ${{ inputs.doxyfile-path }}
     - ${{ inputs.working-directory }}
     - ${{ inputs.enable-latex }}
+    - ${{ inputs.fail-on-warnings }}
