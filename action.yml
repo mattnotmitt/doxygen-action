@@ -6,11 +6,11 @@ branding:
 inputs:
   doxyfile-path:
     description: 'Path to Doxyfile'
-    required: true
+    required: false
     default: './Doxyfile'
   working-directory:
     description: 'Working directory'
-    required: true
+    required: false
     default: '.'
   enable-latex:
     description: 'Generate latex documentation'

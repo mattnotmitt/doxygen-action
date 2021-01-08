@@ -4,6 +4,8 @@
 # $1 is the path to the Doxyfile
 # $2 is the directory where doxygen should be executed
 # $3 is a boolean: true -> enable latex generation, false -> skip latex generation
+# $4 is a boolean: true -> fail on warnings, except those in $5, false -> only fail if error
+# $5 is a string: grep syntax
 
 if [ ! -d $2 ]; then
     echo "Path $2 could not be found!"
@@ -34,10 +36,10 @@ apk add $PACKAGES
 # Tests if the $4 is either 'true' or 'false'.
 if [ ! -z $4 ]; then
     echo "Failing on warnings is enabled."
-    FAIL_ON_WARNINGS=true
+    FAIL_ON_WARNINGS=1
 else
     echo "Failing on warnings disabled."
-    FAIL_ON_WARNINGS=false
+    FAIL_ON_WARNINGS=0
 fi
 
 if [ "$FAIL_ON_WARNINGS" = true ]; then
@@ -67,7 +69,6 @@ if [ "$FAIL_ON_WARNINGS" = true ]; then
 else
   doxygen $1
 fi
-
 
 # if enabled, make latex pdf output
 if [ "$BUILD_LATEX" = true ] ; then
