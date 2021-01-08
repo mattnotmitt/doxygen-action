@@ -36,7 +36,7 @@ apk add $PACKAGES
 # Tests if the $4 is either 'true' or 'false'.
 if [ ! -z $4 ]; then
     echo "Failing on warnings is enabled."
-    FAIL_ON_WARNINGS=1
+    FAIL_ON_WARNINGS=true
 else
     echo "Failing on warnings disabled."
     FAIL_ON_WARNINGS=0
