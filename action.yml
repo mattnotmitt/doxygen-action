@@ -16,6 +16,10 @@ inputs:
     description: 'Generate latex documentation'
     required: false
     default: false
+  additional-packages:
+    description: 'Extra alpine packages for the build environment'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -23,3 +27,4 @@ runs:
     - ${{ inputs.doxyfile-path }}
     - ${{ inputs.working-directory }}
     - ${{ inputs.enable-latex }}
+    - ${{ inputs.additional-packages }}
