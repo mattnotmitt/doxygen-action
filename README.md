@@ -10,11 +10,11 @@ Use with an action such as [actions-gh-pages](https://github.com/peaceiris/actio
 
 ### 'working-directory'
 
-**Required** Path of the working directory to change to before running doxygen. Default: `.`
+**Optional** Path of the working directory to change to before running doxygen. Default: `.`
 
 ### 'doxyfile-path'
 
-**Required** Path of the Doxyfile relative to the working directory. Default: `./Doxyfile`.
+**Optional** Path of the Doxyfile relative to the working directory. Default: `./Doxyfile`.
 
 ### 'enable-latex'
 
@@ -22,9 +22,16 @@ Use with an action such as [actions-gh-pages](https://github.com/peaceiris/actio
 
 ### 'additional-packages'
 
-**Optional** Additional alpine packages to install in the environment (i.e. font packages)
+**Optional** Additional [Alpine packages](https://pkgs.alpinelinux.org/packages) to install in the environment (i.e. font packages)
 
-## Example usage (no LaTeX)
+## Example usage with additional font package
+```yaml
+uses: mattnotmitt/doxygen-action@v1
+with:
+    additional-packages: font-fira-code
+```
+
+## Example usage with set working dir and doxyfile path (no LaTeX)
 
 ```yaml
 uses: mattnotmitt/doxygen-action@v1
