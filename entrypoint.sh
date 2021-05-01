@@ -4,7 +4,7 @@
 # $1 is the path to the Doxyfile
 # $2 is the directory where doxygen should be executed
 # $3 is a boolean: true -> enable latex generation, false -> skip latex generation
-# $4 is a string with extra alpine packages to be installed (i.e. font-fira-code)
+# $4 is a string with extra packages to be installed (i.e. font-fira-code)
 
 if [ ! -d $2 ]; then
   echo "Path $2 could not be found!"
@@ -23,11 +23,11 @@ else
   BUILD_LATEX=0
 fi
 
-PACKAGES="doxygen graphviz ttf-freefont $4"
+PACKAGES="doxygen graphviz fonts-freefont-ttf $4"
 if [ "$BUILD_LATEX" = true ] ; then
-  PACKAGES="$PACKAGES perl build-base texlive-full biblatex ghostscript texlive-updmap-map"
+  PACKAGES="$PACKAGES perl build-essential texlive-full ghostscript"
 fi
-apk add $PACKAGES
+apt-get install $PACKAGES
 
 # run "regular" doxygen
 doxygen $1

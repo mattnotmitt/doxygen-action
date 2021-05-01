@@ -17,7 +17,7 @@ inputs:
     required: false
     default: false
   additional-packages:
-    description: 'Extra alpine packages for the build environment'
+    description: 'Extra packages for the build environment'
     required: false
     default: ''
 runs:
