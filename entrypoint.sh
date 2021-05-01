@@ -23,12 +23,12 @@ else
   BUILD_LATEX=0
 fi
 
-apt-get update
-PACKAGES="doxygen graphviz fonts-freefont-ttf $4"
+pacman --noconfirm -Syu
+PACKAGES="doxygen graphviz gnu-free-fonts $4"
 if [ "$BUILD_LATEX" = true ] ; then
-  PACKAGES="$PACKAGES perl build-essential texlive-full ghostscript"
+  PACKAGES="$PACKAGES perl base-devel texlive-most ghostscript"
 fi
-apt-get install -y $PACKAGES
+pacman --noconfirm -S $PACKAGES
 
 # run "regular" doxygen
 doxygen $1
