@@ -28,7 +28,7 @@ PACKAGES="doxygen graphviz fonts-freefont-ttf $4"
 if [ "$BUILD_LATEX" = true ] ; then
   PACKAGES="$PACKAGES perl build-essential texlive-full ghostscript"
 fi
-apt-get install $PACKAGES
+apt-get install -y $PACKAGES
 
 # run "regular" doxygen
 doxygen $1
