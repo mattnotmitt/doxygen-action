@@ -8,11 +8,13 @@
 
 if [ ! -d $2 ]; then
   echo "Path $2 could not be found!"
+  exit 1
 fi
 cd $2
 
 if [ ! -f $1 ]; then
   echo "File $1 could not be found!"
+  exit 1
 fi
 
 # install packages; add latex-related packages only if enabled
