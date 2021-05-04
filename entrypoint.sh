@@ -25,11 +25,9 @@ else
   BUILD_LATEX=0
 fi
 
-PACKAGES="doxygen graphviz ttf-freefont $4"
-if [ "$BUILD_LATEX" = true ] ; then
-  PACKAGES="$PACKAGES perl build-base texlive-full biblatex ghostscript"
+if [ ! -z $4 ]; then
+  apk add $4
 fi
-apk add $PACKAGES
 
 # run "regular" doxygen
 doxygen $1

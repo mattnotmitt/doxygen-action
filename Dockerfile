@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM alpine:3.13.3
+FROM ghcr.io/mattnotmitt/doxygen-action:latest
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
