@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 # execute doxygen
 # $1 is the path to the Doxyfile
