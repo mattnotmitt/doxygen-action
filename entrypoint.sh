@@ -33,6 +33,8 @@ apk add $PACKAGES
 
 # run "regular" doxygen
 doxygen $1
+# capture Doxygen exit code
+DOXYGEN_CMD_STATUS=$?
 
 # if enabled, make latex pdf output
 if [ "$BUILD_LATEX" = true ] ; then
@@ -41,4 +43,4 @@ if [ "$BUILD_LATEX" = true ] ; then
 fi
 
 # feed back doxygen's exit code status to Github Actions
-exit $?
+exit $DOXYGEN_CMD_STATUS
