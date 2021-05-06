@@ -39,3 +39,6 @@ if [ "$BUILD_LATEX" = true ] ; then
   cd $LATEX_DIR
   make
 fi
+
+# feed back doxygen's exit code status to Github Actions
+exit $?
