@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh -xe
 
 # execute doxygen
 # $1 is the path to the Doxyfile
@@ -18,8 +18,9 @@ if [ ! -f $1 ]; then
 fi
 
 # install packages; add latex-related packages only if enabled
-if [ ! -z $3 ] ; then
-  BUILD_LATEX=$3 && $(grep -q GENERATE_LATEX\\s\*=\\s\*YES $1)
+if [ ! -z $3 ] && $3; then
+  # Only enable BUILD_LATEX if specified in doxyfile
+  grep -q GENERATE_LATEX\\s\*=\\s\*YES $1 && BUILD_LATEX=true || BUILD_LATEX=false
   LATEX_DIR="./$(sed -n -e 's/^OUTPUT_DIRECTORY\s*=\s*//p' $1)/$(sed -n -e 's/^LATEX_OUTPUT\s*=\s*//p' $1)"
 else
   BUILD_LATEX=0
