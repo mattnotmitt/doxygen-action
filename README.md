@@ -14,9 +14,9 @@ An `edge` tag has been created, tracking the version of doxygen available on the
 | Action Version | Doxygen Version | Alpine Version | Tag Aliases |
 |----------------|-----------------|----------------|-------------|
 | edge           | 1.9.2-r2        | edge           |             |
-| v1.9.2         | 1.9.2-r1        | 3.15.0         | v1, v1.9    |
-| v1.9.1         | 1.9.1-r1        | 3.14.3         |             |
-| v1.8.18        | 1.8.18-r0       | 3.12.9         | v1.8        |
+| 1.9.2          | 1.9.2-r1        | 3.15.0         | v1, v1.9    |
+| 1.9.1          | 1.9.1-r1        | 3.14.3         |             |
+| 1.8.18         | 1.8.18-r0       | 3.12.9         | v1.8        |
 
 ## Inputs
 
