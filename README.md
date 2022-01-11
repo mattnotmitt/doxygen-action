@@ -6,6 +6,18 @@ Use with an action such as [actions-gh-pages](https://github.com/peaceiris/actio
 
 **NOTE:** If you are using dot/graphviz in your doxygen config to generate diagrams the only fonts installed, and hence can be used are those in the [GNU FreeFont](https://www.gnu.org/software/freefont/) package (FreeSans, FreeMono and FreeSerif) or in any package listed in `additional-packages`.
 
+## Versions
+Previously, versions of this action incremented as changes were made to the repo. However, this has now been changed so the tagged versions of this action match the doxygen versions they relate to.
+An `edge` tag has been created, tracking the version of doxygen available on the alpine `edge` tag.
+
+### Supported Tags
+| Action Version | Doxygen Version | Alpine Version | Tag Aliases |
+|----------------|-----------------|----------------|-------------|
+| edge           | 1.9.2-r2        | edge           |             |
+| v1.9.2         | 1.9.2-r1        | 3.15.0         | v1, v1.9    |
+| v1.9.1         | 1.9.1-r1        | 3.14.3         |             |
+| v1.8.18        | 1.8.18-r0       | 3.12.9         | v1.8        |
+
 ## Inputs
 
 ### 'working-directory'
@@ -26,7 +38,7 @@ Use with an action such as [actions-gh-pages](https://github.com/peaceiris/actio
 
 ## Example usage with additional font package
 ```yaml
-uses: mattnotmitt/doxygen-action@v1
+uses: mattnotmitt/doxygen-action@v1.9.2
 with:
     additional-packages: font-fira-code
 ```
@@ -34,7 +46,7 @@ with:
 ## Example usage with set working dir and doxyfile path (no LaTeX)
 
 ```yaml
-uses: mattnotmitt/doxygen-action@v1
+uses: mattnotmitt/doxygen-action@v1.9.2
 with:
     working-directory: 'submodule/'
     doxyfile-path: 'docs/Doxygen'
@@ -43,7 +55,7 @@ with:
 ## Example usage (with LaTeX)
 
 ```yaml
-uses: mattnotmitt/doxygen-action@v1
+uses: mattnotmitt/doxygen-action@v1.9.2
 with:
     working-directory: 'submodule/'
     doxyfile-path: 'docs/Doxygen'
