@@ -32,6 +32,8 @@ if [ "$BUILD_LATEX" = true ] ; then
 fi
 apk add $PACKAGES
 
+echo "::notice::You're on the bleeding edge of doxygen-action. To pin this version use: mattnotmitt/doxygen-action@$(doxygen --version)"
+
 # run "regular" doxygen
 doxygen $1
 
