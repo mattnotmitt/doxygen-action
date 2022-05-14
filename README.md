@@ -13,17 +13,10 @@ An `edge` tag has been created, tracking the version of doxygen available on the
 ### Supported Tags
 | Action Version | Doxygen Version | Alpine Version | Tag Aliases |
 |----------------|-----------------|----------------|-------------|
-| edge           | 1.9.3-r1        | edge           |             |
-| 1.9.3          | 1.9.3-r1        | edge           | v1, v1.9    |
-| 1.9.2          | 1.9.2-r1        | 3.15.0         |             |
+| edge           | 1.9.4-r0        | edge           |             |
+| 1.9.2          | 1.9.2-r1        | 3.15.0         | v1, v1.9    |
 | 1.9.1          | 1.9.1-r1        | 3.14.3         |             |
 | 1.8.18         | 1.8.18-r0       | 3.12.9         | v1.8        |
-
----
-**WARNING**: As the `1.9.3` tag pins a version on the edge branch of Alpine, this may be prone to breaking at any time. 
-If you need the latest version of doxygen, use this action's `edge` tag until `1.9.3` lands in a stable version of Alpine.
-
----
 
 ## Inputs
 
