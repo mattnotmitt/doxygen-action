@@ -1,6 +1,6 @@
 #!/bin/sh -xe
 
-echo "::error This version of the action has been deprecated. If you need features from doxygen 1.9.3 or above, use mattnotmitt/doxygen-action@edge or switch to another pinned version e.g. mattnotmitt/doxygen-action@1.9.2"
+echo "::error::This version of the action has been deprecated. If you need features from doxygen 1.9.3 or above, use mattnotmitt/doxygen-action@v1.9.4"
 exit 1
 
 # execute doxygen
