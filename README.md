@@ -39,7 +39,7 @@ An `edge` tag has been created, tracking the version of doxygen available on the
 
 ## Example usage with additional font package
 ```yaml
-uses: mattnotmitt/doxygen-action@v1.9.2
+uses: mattnotmitt/doxygen-action@v1.9.4
 with:
     additional-packages: font-fira-code
 ```
@@ -47,7 +47,7 @@ with:
 ## Example usage with set working dir and doxyfile path (no LaTeX)
 
 ```yaml
-uses: mattnotmitt/doxygen-action@v1.9.2
+uses: mattnotmitt/doxygen-action@v1.9.4
 with:
     working-directory: 'submodule/'
     doxyfile-path: 'docs/Doxygen'
@@ -56,7 +56,7 @@ with:
 ## Example usage (with LaTeX)
 
 ```yaml
-uses: mattnotmitt/doxygen-action@v1.9.2
+uses: mattnotmitt/doxygen-action@v1.9.4
 with:
     working-directory: 'submodule/'
     doxyfile-path: 'docs/Doxygen'
