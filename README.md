@@ -14,10 +14,11 @@ An `edge` tag has been created, tracking the version of doxygen available on the
 | Action Version | Doxygen Version | Alpine Version | Tag Aliases |
 |----------------|-----------------|----------------|-------------|
 | edge           | 1.9.4-r0        | edge           |             |
-| 1.9.4          | 1.9.4-r0        | 3.16.0         | v1, v1.9    |
-| 1.9.2          | 1.9.2-r1        | 3.15.0         |             |
-| 1.9.1          | 1.9.1-r1        | 3.14.3         |             |
-| 1.8.18         | 1.8.18-r0       | 3.12.9         | v1.8        |
+| 1.9.5          | 1.9.5-r0        | 3.17           | v1, v1.9    |
+| 1.9.4          | 1.9.4-r0        | 3.16           |             |
+| 1.9.2          | 1.9.2-r1        | 3.15           |             |
+| 1.9.1          | 1.9.1-r1        | 3.14           |             |
+| 1.8.18         | 1.8.18-r0       | 3.12           | v1.8        |
 
 ## Inputs
 
@@ -39,7 +40,7 @@ An `edge` tag has been created, tracking the version of doxygen available on the
 
 ## Example usage with additional font package
 ```yaml
-uses: mattnotmitt/doxygen-action@v1.9.4
+uses: mattnotmitt/doxygen-action@v1.9.5
 with:
     additional-packages: font-fira-code
 ```
@@ -47,7 +48,7 @@ with:
 ## Example usage with set working dir and doxyfile path (no LaTeX)
 
 ```yaml
-uses: mattnotmitt/doxygen-action@v1.9.4
+uses: mattnotmitt/doxygen-action@v1.9.5
 with:
     working-directory: 'submodule/'
     doxyfile-path: 'docs/Doxygen'
@@ -56,7 +57,7 @@ with:
 ## Example usage (with LaTeX)
 
 ```yaml
-uses: mattnotmitt/doxygen-action@v1.9.4
+uses: mattnotmitt/doxygen-action@v1.9.5
 with:
     working-directory: 'submodule/'
     doxyfile-path: 'docs/Doxygen'
