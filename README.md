@@ -11,14 +11,16 @@ Previously, versions of this action incremented as changes were made to the repo
 An `edge` tag has been created, tracking the version of doxygen available on the alpine `edge` tag.
 
 ### Supported Tags
-| Action Version | Doxygen Version | Alpine Version | Tag Aliases |
-|----------------|-----------------|----------------|-------------|
-| edge           | 1.9.6-r0        | edge           |             |
-| 1.9.5          | 1.9.5-r0        | 3.17           | v1, v1.9    |
-| 1.9.4          | 1.9.4-r0        | 3.16           |             |
-| 1.9.2          | 1.9.2-r1        | 3.15           |             |
-| 1.9.1          | 1.9.1-r1        | 3.14           |             |
-| 1.8.18         | 1.8.18-r0       | 3.12           | v1.8        |
+| Action Version | Doxygen Version  | Alpine Version | Tag Aliases |
+|----------------|------------------|----------------|-------------|
+| edge           | 1.10.0-r0        | edge           |             |
+| 1.9.8          | 1.9.8-r0         | 3.19           | v1, v1.9    |
+| 1.9.6          | 1.9.6-r1         | 3.18           |             |
+| 1.9.5          | 1.9.5-r0         | 3.17           |             |
+| 1.9.4          | 1.9.4-r0         | 3.16           |             |
+| 1.9.2          | 1.9.2-r1         | 3.15           |             |
+| 1.9.1          | 1.9.1-r1         | 3.14           |             |
+| 1.8.18         | 1.8.18-r0        | 3.12           | v1.8        |
 
 ## Inputs
 
