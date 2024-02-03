@@ -26,13 +26,11 @@ else
   BUILD_LATEX=0
 fi
 
-PACKAGES="doxygen graphviz ttf-freefont $4"
+PACKAGES="doxygen=1.9.6-r1 graphviz ttf-freefont $4"
 if [ "$BUILD_LATEX" = true ] ; then
   PACKAGES="$PACKAGES perl build-base texlive-full biblatex ghostscript"
 fi
 apk add $PACKAGES
-
-echo "::notice::You're on the bleeding edge of doxygen-action. To pin this version use: mattnotmitt/doxygen-action@$(doxygen --version)"
 
 # run "regular" doxygen
 doxygen $1
