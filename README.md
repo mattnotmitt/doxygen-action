@@ -30,6 +30,11 @@ An `edge` tag has been created, tracking the version of doxygen available on the
 
 **Optional** Path of the working directory to change to before running doxygen. Default: `.`
 
+> [!NOTE]
+> If you want to use a fully qualified path, note that `${{ github.workspace }} / $GITHUB_WORKSPACE` directory
+> is mounted at `/github/workspace` within the Docker container.
+> See the [GitHub actions docs](https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-docker-container-action#accessing-files-created-by-a-container-action) for more information.
+
 ### 'doxyfile-path'
 
 **Optional** Path of the Doxyfile relative to the working directory. Default: `./Doxyfile`.
