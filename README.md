@@ -13,8 +13,10 @@ An `edge` tag has been created, tracking the version of doxygen available on the
 ### Supported Tags
 | Action Version | Doxygen Version  | Alpine Version | Tag Aliases |
 |----------------|------------------|----------------|-------------|
-| edge           | 1.10.0-r0        | edge           |             |
-| 1.9.8          | 1.9.8-r0         | 3.19           | v1, v1.9    |
+| edge           | 1.13.2-r0        | edge           |             |
+| 1.12.0         | 1.12.0-r0        | 3.21           | v1, v1.12   |
+| 1.11.0         | 1.11.0-r0        | 3.20           | v1, v1.11   |
+| 1.9.8          | 1.9.8-r0         | 3.19           | v1.9        |
 | 1.9.6          | 1.9.6-r1         | 3.18           |             |
 | 1.9.5          | 1.9.5-r0         | 3.17           |             |
 | 1.9.4          | 1.9.4-r0         | 3.16           |             |
